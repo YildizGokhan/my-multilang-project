@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": { "tr": "Saç Ekimi", "en": "Hair Transplant", "de": "Haartransplantation" },
+      "category": { "tr": "Sağlık", "en": "Health", "de": "Gesundheit" },
+      "description": { 
+        "tr": "Profesyonel saç ekimi hizmetleri.",
+        "en": "Professional hair transplant services.",
+        "de": "Professionelle Haartransplantationsdienste."
+      }
+    },
+    {
+      "id": 2,
+      "name": { "tr": "Göz Kapağı Estetiği", "en": "Eyelid Surgery", "de": "Augenlidchirurgie" },
+      "category": { "tr": "Estetik", "en": "Aesthetic", "de": "Ästhetik" },
+      "description": { 
+        "tr": "Göz kapağı kaldırma operasyonları.",
+        "en": "Eyelid lifting operations.",
+        "de": "Augenlidlifting-Operationen."
+      }
+    },
+    {
+      "id": 3,
+      "name": { "tr": "Diş İmplantı", "en": "Dental Implant", "de": "Zahnimplantat" },
+      "category": { "tr": "Diş Sağlığı", "en": "Dental Health", "de": "Zahngesundheit" },
+      "description": { 
+        "tr": "Güçlü ve doğal görünümlü diş implantları.",
+        "en": "Strong and natural-looking dental implants.",
+        "de": "Starke und natürlich aussehende Zahnimplantate."
+      }
+    },
+    {
+      "id": 4,
+      "name": { "tr": "Lazer Epilasyon", "en": "Laser Hair Removal", "de": "Laser-Haarentfernung" },
+      "category": { "tr": "Güzellik", "en": "Beauty", "de": "Schönheit" },
+      "description": { 
+        "tr": "İstenmeyen tüylerden kalıcı olarak kurtulun.",
+        "en": "Permanently get rid of unwanted hair.",
+        "de": "Dauerhaft unerwünschte Haare loswerden."
+      }
+    },
+    {
+      "id": 5,
+      "name": { "tr": "Cilt Bakımı", "en": "Skin Care", "de": "Hautpflege" },
+      "category": { "tr": "Güzellik", "en": "Beauty", "de": "Schönheit" },
+      "description": { 
+        "tr": "Cildiniz için en iyi bakım çözümleri.",
+        "en": "The best care solutions for your skin.",
+        "de": "Die besten Pflegeprodukte für Ihre Haut."
+      }
+    }
+  ]
+  
