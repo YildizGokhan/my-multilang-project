@@ -1,7 +1,9 @@
 {
-  "title": "Web sitemize hoş geldiniz!",
-  "search_placeholder": "Bir ürün arayın...",
+  "title": "Hoş Geldiniz",
+  "description": "Websitemize hoş geldiniz.",
+  "search_placeholder": "Ara...",
+  "search_button": "Ara",
   "search_results": "Arama Sonuçları",
   "search_for": "için bulunan sonuçlar",
-  "no_results": "Sonuç bulunamadı."
+  "no_results": "Sonuç bulunamadı"
 }

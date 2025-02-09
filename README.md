@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🌍 Next.js 14 Çok Dilli (Multilingual) Web Uygulaması
+Bu proje Next.js 14 ve Tailwind CSS kullanılarak geliştirilmiş çok dilli (Türkçe, İngilizce, Almanca) bir web uygulamasıdır.
+Kullanıcılar LanguageSwitcher bileşeni ile dili değiştirebilir ve sistem seçilen dili localStorage'da saklayarak kalıcı hale getirir.
+Dil değiştirildiğinde tüm sayfa içeriği ve arama çubuğu otomatik olarak güncellenir.
 
-## Getting Started
+🚀 Proje Özellikleri
+✔ Next.js 14 ile Server-Side Rendering (SSR) ve Client-Side Rendering (CSR) uyumlu
+✔ Tailwind CSS ile modern ve responsive tasarım
+✔ Context API ile global dil yönetimi
+✔ Dil değiştirildiğinde tüm bileşenler otomatik güncellenir
+✔ Arama çubuğu (SearchBar) çok dilli ve Fuse.js ile yanlış yazımları tolere eder
+✔ Next.js use client kullanımıyla optimizasyon sağlandı
 
-First, run the development server:
+📌 Kurulum
+Öncelikle projeyi klonlayın:
 
-```bash
+bash
+Kopyala
+Düzenle
+git clone https://github.com/kullaniciadi/nextjs-multilang.git
+cd nextjs-multilang
+Gerekli bağımlılıkları yükleyin:
+
+bash
+Kopyala
+Düzenle
+npm install
+Geliştirme ortamında projeyi başlatın:
+
+bash
+Kopyala
+Düzenle
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📂 Proje Yapısı
+python
+Kopyala
+Düzenle
+📦 src
+ ┣ 📂 app
+ ┃ ┣ 📂 search
+ ┃ ┃ ┗ 📜 page.js        # Arama sayfası (Fuzzy Search destekli)
+ ┃ ┣ 📜 layout.js        # Ana Layout, tüm sayfalara çeviri desteği sağlar
+ ┃ ┣ 📜 page.js          # Ana sayfa, çeviri destekli
+ ┣ 📂 components
+ ┃ ┣ 📜 Navbar.js        # Üst menü, dil değiştirici içerir
+ ┃ ┣ 📜 SearchBar.js     # Arama kutusu, çok dilli
+ ┃ ┣ 📜 LanguageSwitcher.js  # Dil değiştirme bileşeni
+ ┣ 📂 context
+ ┃ ┗ 📜 TranslationContext.js  # Çoklu dil desteği için Context API
+ ┣ 📂 locales
+ ┃ ┣ 📜 en.json         # İngilizce çeviriler
+ ┃ ┣ 📜 tr.json         # Türkçe çeviriler
+ ┃ ┗ 📜 de.json         # Almanca çeviriler
+ ┣ 📂 lib
+ ┃ ┗ 📜 search.js       # Fuzzy Search (Yakın eşleşme) algoritması
+ ┗ 📜 globals.css       # Global CSS dosyası
+🌍 Çok Dilli Yapı (Localization)
+Uygulama 3 dil destekler:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Türkçe (tr)
+İngilizce (en)
+Almanca (de)

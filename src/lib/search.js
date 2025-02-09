@@ -1,10 +1,9 @@
 import Fuse from "fuse.js";
 import products from "@/data/products.json";
 
-// 🔹 Kullanıcının seçtiği dili güvenli bir şekilde alma
 const getLanguage = () => {
   if (typeof window !== "undefined") {
-    return localStorage.getItem("lang") || "tr"; // Varsayılan dil Türkçe
+    return localStorage.getItem("lang") || "tr";
   }
   return "tr";
 };
@@ -35,10 +34,10 @@ const normalizeText = (text, lang) => {
       .replace(/ß/g, "ss");
   }
 
-  return text; // İngilizce için küçük harf dönüşümü yeterli
+  return text;
 };
 
-// 🔹 Fuse.js yapılandırması
+
 const getFuseOptions = () => ({
   keys: ["normalizedName", "normalizedCategory", "normalizedDescription"],
   threshold: 0.5,
@@ -49,23 +48,22 @@ const getFuseOptions = () => ({
   findAllMatches: true,
 });
 
-// 🔹 En iyi eşleşmeyi bulma
+
 const findBestMatch = (results) => {
   if (!results.length) return [];
   return results.sort((a, b) => a.score - b.score).map((result) => result.item);
 };
 
-// 🔹 Arama fonksiyonu
 export const searchProducts = (query) => {
   if (!query) return [];
 
-  const lang = getLanguage(); // 🔥 Seçili dili al
+  const lang = getLanguage(); 
   const normalizedQuery = normalizeText(query, lang);
 
-  // 🔹 Seçilen dile göre veri setini düzenle
+ 
   const localizedData = products.map((item) => ({
     id: item.id,
-    name: item.name[lang], // 🔥 Doğru dili kullanarak nesne yerine string kaydediyoruz
+    name: item.name[lang], 
     category: item.category[lang],
     description: item.description[lang],
     normalizedName: normalizeText(item.name[lang], lang),
@@ -73,10 +71,9 @@ export const searchProducts = (query) => {
     normalizedDescription: normalizeText(item.description[lang], lang),
   }));
 
-  // 🔹 Fuse.js ile arama yap
   const fuse = new Fuse(localizedData, getFuseOptions());
   const results = fuse.search(normalizedQuery);
 
-  // 🔥 En iyi sonucu getir
+
   return findBestMatch(results);
 };

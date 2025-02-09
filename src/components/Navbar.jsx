@@ -1,16 +1,16 @@
 "use client";
+import { useTranslation } from "@/context/TranslationContext";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { getTranslation } from "@/lib/getTranslation";
-import SearchBar from "./SearchBar"; // Arama çubuğunu da ekleyelim
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
-  const t = getTranslation(); // Seçilen dile göre çeviri al
+  const { translations } = useTranslation();
 
   return (
     <nav className="p-4 flex justify-between items-center bg-gray-800 text-white">
-      <h1 className="text-lg font-bold">{t.title}</h1>
+      <h1 className="text-lg font-bold">{translations.title}</h1>
       <div className="flex gap-4">
-        <SearchBar /> {/* Arama çubuğunu navbar içine ekliyoruz */}
+        <SearchBar />
         <LanguageSwitcher />
       </div>
     </nav>

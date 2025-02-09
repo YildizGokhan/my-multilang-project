@@ -1,7 +1,9 @@
 {
-  "title": "Willkommen auf unserer Website!",
-  "search_placeholder": "Suche nach einem Produkt...",
+  "title": "Willkommen",
+  "description": "Willkommen auf unserer Website",
+  "search_placeholder": "Suchen...",
+  "search_button": "Suchen",
   "search_results": "Suchergebnisse",
-  "search_for": "gefunden für",
-  "no_results": "Keine Ergebnisse gefunden."
+  "search_for": "Ergebnisse gefunden für",
+  "no_results": "Keine Ergebnisse gefunden"
 }

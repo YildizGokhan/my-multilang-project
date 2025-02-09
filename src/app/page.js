@@ -1,12 +1,13 @@
-import { getTranslation } from "@/lib/getTranslation";
+"use client";
+import { useTranslation } from "@/context/TranslationContext";
 
 export default function Home() {
-  const t = getTranslation(); 
+  const { translations } = useTranslation();
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-semibold">{t.title}</h2>
-      <p className="mt-2 text-gray-700">{t.description}</p>
+      <h2 className="text-2xl font-semibold">{translations.title}</h2>
+      <p className="mt-2 text-gray-700">{translations.description}</p>
     </div>
   );
 }
