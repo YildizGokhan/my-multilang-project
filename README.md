@@ -9,7 +9,8 @@ Dil değiştirildiğinde tüm sayfa içeriği ve arama çubuğu otomatik olarak 
 ✔ Context API ile global dil yönetimi
 ✔ Dil değiştirildiğinde tüm bileşenler otomatik güncellenir
 ✔ Arama çubuğu (SearchBar) çok dilli ve Fuse.js ile yanlış yazımları tolere eder
-✔ Next.js use client kullanımıyla optimizasyon sağlandı
+✔ Next.js use client kullanımıyla optimizasyon sağlandı.
+Fuse.js ile Fuzzy search kullanımı sağlandı.
 
 📌 Kurulum
 Öncelikle projeyi klonlayın:
@@ -17,24 +18,11 @@ Dil değiştirildiğinde tüm sayfa içeriği ve arama çubuğu otomatik olarak 
 bash
 Kopyala
 Düzenle
-git clone https://github.com/kullaniciadi/nextjs-multilang.git
+git clone https://github.com/YildizGokhan/my-multilang-project.git
 cd nextjs-multilang
 Gerekli bağımlılıkları yükleyin:
 
-bash
-Kopyala
-Düzenle
-npm install
-Geliştirme ortamında projeyi başlatın:
 
-bash
-Kopyala
-Düzenle
-npm run dev
-📂 Proje Yapısı
-python
-Kopyala
-Düzenle
  ![alt text](image.png)
 🌍 Çok Dilli Yapı (Localization)
 Uygulama 3 dil destekler:
