@@ -18,7 +18,7 @@ Fuse.js ile Fuzzy search kullanımı sağlandı.
 bash
 Kopyala
 Düzenle
-git clone [https://github.com/kullaniciadi/nextjs-multilang.git](https://github.com/YildizGokhan/my-multilang-project.git)
+git clone https://github.com/YildizGokhan/my-multilang-project.git
 cd nextjs-multilang
 Gerekli bağımlılıkları yükleyin:
 
