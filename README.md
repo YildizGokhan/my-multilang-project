@@ -35,25 +35,7 @@ npm run dev
 python
 Kopyala
 Düzenle
-📦 src
- ┣ 📂 app
- ┃ ┣ 📂 search
- ┃ ┃ ┗ 📜 page.js        # Arama sayfası (Fuzzy Search destekli)
- ┃ ┣ 📜 layout.js        # Ana Layout, tüm sayfalara çeviri desteği sağlar
- ┃ ┣ 📜 page.js          # Ana sayfa, çeviri destekli
- ┣ 📂 components
- ┃ ┣ 📜 Navbar.js        # Üst menü, dil değiştirici içerir
- ┃ ┣ 📜 SearchBar.js     # Arama kutusu, çok dilli
- ┃ ┣ 📜 LanguageSwitcher.js  # Dil değiştirme bileşeni
- ┣ 📂 context
- ┃ ┗ 📜 TranslationContext.js  # Çoklu dil desteği için Context API
- ┣ 📂 locales
- ┃ ┣ 📜 en.json         # İngilizce çeviriler
- ┃ ┣ 📜 tr.json         # Türkçe çeviriler
- ┃ ┗ 📜 de.json         # Almanca çeviriler
- ┣ 📂 lib
- ┃ ┗ 📜 search.js       # Fuzzy Search (Yakın eşleşme) algoritması
- ┗ 📜 globals.css       # Global CSS dosyası
+ ![alt text](image.png)
 🌍 Çok Dilli Yapı (Localization)
 Uygulama 3 dil destekler:
 
