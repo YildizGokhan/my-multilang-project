@@ -5,11 +5,15 @@ import { useRouter, usePathname } from "next/navigation";
 const LanguageSwitcher = () => {
   const { lang, changeLanguage } = useTranslation();
   const router = useRouter();
-  const pathname = usePathname(); // Mevcut URL'yi al
+  const pathname = usePathname(); 
 
   const changeLang = (newLang) => {
+    localStorage.setItem("lang", newLang); 
     changeLanguage(newLang);
-    router.push(`/${newLang}${pathname.replace(/^\/[a-z]{2}/, "")}`);
+
+  
+    const newPath = `/${newLang}${pathname.replace(/^\/[a-z]{2}/, "")}`;
+    router.push(newPath);
   };
 
   return (
