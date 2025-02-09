@@ -4,18 +4,29 @@ import { useSearchParams } from "next/navigation";
 import { searchProducts } from "@/lib/search";
 import { useTranslation } from "@/context/TranslationContext";
 
-export default function SearchPage() {
+export default function SearchPage({ params }) {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const { translations } = useTranslation();
+  const [locale, setLocale] = useState("tr"); 
+  useEffect(() => {
+    async function fetchLocale() {
+      const resolvedParams = await params;
+      setLocale(resolvedParams.locale || "tr");
+    }
+
+    fetchLocale();
+  }, [params]);
 
   useEffect(() => {
-    const q = searchParams.get("q") || "";
-    setQuery(q);
-    const fetchedResults = searchProducts(q);
-    setResults(fetchedResults);
-  }, [searchParams]);
+    if (locale) {
+      const q = searchParams.get("q") || "";
+      setQuery(q);
+      const fetchedResults = searchProducts(q, locale);
+      setResults(fetchedResults);
+    }
+  }, [searchParams, locale]);
 
   return (
     <div className="p-6">
