@@ -23,7 +23,8 @@ cd nextjs-multilang
 Gerekli bağımlılıkları yükleyin:
 
 
- ![alt text](image.png)
+![image](https://github.com/user-attachments/assets/77475e8b-29a4-49a6-a53c-a32efb869697)
+
 🌍 Çok Dilli Yapı (Localization)
 Uygulama 3 dil destekler:
 
