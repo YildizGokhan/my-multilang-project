@@ -18,7 +18,7 @@ export const TranslationProvider = ({ children }) => {
 
   const getTranslations = (selectedLang) => {
     const translations = { en, tr, de };
-    return translations[selectedLang] || en;
+    return translations[selectedLang] || tr;
   };
 
   const changeLanguage = (newLang) => {

@@ -25,7 +25,7 @@ export const searchProducts = (query, lang) => {
  
   const fuse = new Fuse(localizedData, {
     keys: ["name", "category", "description"],
-    threshold: 0.4, // Yakın eşleşme toleransı
+    threshold: 0.4, 
     distance: 100,
     minMatchCharLength: 2
   });

@@ -18,7 +18,7 @@ export default function Home({ params }) {
   }, [params]);
 
   if (!isHydrated) {
-    return <p>Loading...</p>; // ✅ SSR ve CSR farklı içerik üretmesin
+    return <p>Loading...</p>; 
   }
 
   return (

@@ -12,7 +12,7 @@ const SearchBar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      // Mevcut URL'deki dili koruyarak yeni URL oluştur
+
       const newPath = `/${lang}/search?q=${encodeURIComponent(query)}`;
       router.push(newPath);
     }
